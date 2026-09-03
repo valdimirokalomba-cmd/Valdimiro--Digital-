@@ -135,37 +135,5 @@
     <a href="#produtos" class="button">Ver produtos</a>
   </section>
 
-  <section class="products" id="produtos">
-    <h2>Os nossos produtos</h2>
+  <section class="products" id="prod e outros serviços para o seu negócio.</p>
 
-    <div class="cards">
-
-      <div class="card">
-        <h3>E-book Mente Bilionária</h3>
-        <p>Aprenda princípios para desenvolver uma mentalidade de crescimento.</p>
-        <div class="price">5.000 Kz</div>
-        <a href="#contacto" class="button">Comprar</a>
-      </div>
-
-      <div class="card">
-        <h3>Curso de Redes Sociais</h3>
-        <p>Aprenda estratégias para crescer e divulgar o seu negócio nas redes sociais.</p>
-        <div class="price">10.000 Kz</div>
-        <a href="#contacto" class="button">Comprar</a>
-      </div>
-
-      <div class="card">
-        <h3>Serviços Digitais</h3>
-        <p>Divulgação, criação de conteúdos e outros serviços para o seu negócio.</p>
-        <div class="price">Sob consulta</div>
-        <a href="#contacto" class="button">Contactar</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact" id="contacto">
-    <h2>Quer comprar ou contratar um serviço?</h2>
-    <p>Entre em contacto connosco para saber como fazer o pagamento e receber o seu produto.</p>
-
-    <a class="button" href="https
