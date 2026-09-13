@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Valdimiro Digital</title>
+  <title>Valdimiro Music | Distribuição Musical</title>
 
-  <meta name="description" content="Valdimiro Digital - Produtos e serviços digitais em Angola.">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Valdimiro Music — distribuição musical para artistas independentes. Leva a tua música ao mundo.">
+  <meta name="theme-color" content="#080808">
 
   <style>
     * {
@@ -15,137 +15,160 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
-      background: #f4f7fb;
-      color: #111827;
+      background: #080808;
+      color: #fff;
       line-height: 1.6;
     }
 
-    /* HEADER */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
     header {
-      background: linear-gradient(135deg, #0f172a, #172554);
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      background: rgba(8,8,8,0.95);
+      border-bottom: 1px solid #242424;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
     .logo span {
-      color: #38bdf8;
+      color: #f5c542;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
+      color: #ddd;
       font-size: 14px;
-      font-weight: bold;
+      transition: .3s;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: #f5c542;
     }
 
-    /* HERO */
     .hero {
-      min-height: 600px;
-      padding: 90px 7%;
+      min-height: 88vh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 40px;
+      text-align: center;
       background:
-        radial-gradient(circle at top right, rgba(56,189,248,0.22), transparent 35%),
-        linear-gradient(135deg, #0f172a, #172554);
-      color: white;
+        radial-gradient(circle at top, #292000 0%, #080808 48%),
+        #080808;
+      padding: 70px 20px;
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 850px;
+      margin: auto;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(56,189,248,0.15);
-      color: #7dd3fc;
-      border: 1px solid rgba(125,211,252,0.3);
-      padding: 8px 16px;
+      border: 1px solid #f5c542;
+      color: #f5c542;
+      padding: 8px 15px;
       border-radius: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       font-size: 13px;
       font-weight: bold;
     }
 
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
       line-height: 1.05;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .hero h1 span {
-      color: #38bdf8;
+    h1 span {
+      color: #f5c542;
     }
 
     .hero p {
+      color: #c9c9c9;
+      max-width: 680px;
+      margin: 0 auto 32px;
       font-size: 18px;
-      color: #cbd5e1;
-      max-width: 580px;
-      margin-bottom: 30px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
+      justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 15px;
     }
 
     .btn {
       display: inline-block;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 12px;
+      padding: 14px 23px;
+      border-radius: 10px;
       font-weight: bold;
-      transition: 0.3s;
+      border: 1px solid #f5c542;
+      cursor: pointer;
+      transition: .3s;
     }
 
     .btn-primary {
-      background: #22c55e;
-      color: white;
+      background: #f5c542;
+      color: #080808;
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      background: #16a34a;
+      background: #ffd968;
     }
 
-    .btn-secondary {
-      border: 1px solid #64748b;
-      color: white;
+    .btn-outline {
+      background: transparent;
+      color: #fff;
     }
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
+    .btn-outline:hover {
+      background: #f5c542;
+      color: #080808;
     }
 
-    /* SECTIONS */
     section {
-      padding: 80px 7%;
+      padding: 85px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
     }
 
     .section-title {
@@ -159,222 +182,265 @@
     }
 
     .section-title p {
-      color: #64748b;
+      color: #aaa;
     }
 
-    /* PRODUCTS */
-    .products {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      max-width: 1150px;
-      margin: auto;
+      gap: 22px;
     }
 
     .card {
-      background: white;
-      border-radius: 22px;
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 18px;
       padding: 30px;
-      box-shadow: 0 12px 35px rgba(15,23,42,0.08);
-      border: 1px solid #e5e7eb;
-      transition: 0.3s;
-      position: relative;
-      overflow: hidden;
+      transition: .3s;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.14);
+      transform: translateY(-6px);
+      border-color: #f5c542;
     }
 
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      background: #e0f2fe;
-      margin-bottom: 20px;
+    .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 22px;
     }
 
     .card p {
-      color: #64748b;
-      min-height: 70px;
-      margin-bottom: 20px;
+      color: #aaa;
+      font-size: 15px;
     }
 
     .price {
-      font-size: 30px;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 20px;
+      font-size: 35px;
+      color: #f5c542;
+      font-weight: 900;
+      margin: 15px 0;
     }
 
     .price small {
-      font-size: 14px;
-      color: #64748b;
+      color: #999;
+      font-size: 13px;
       font-weight: normal;
     }
 
-    .buy {
-      width: 100%;
-      display: block;
-      text-align: center;
-      background: #16a34a;
-      color: white;
-      padding: 14px;
-      border-radius: 12px;
-      text-decoration: none;
+    .features {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: #f5c542;
       font-weight: bold;
-      transition: 0.3s;
+      margin-right: 8px;
     }
 
-    .buy:hover {
-      background: #15803d;
-      transform: scale(1.02);
+    .highlight {
+      border-color: #f5c542;
+      position: relative;
     }
 
-    /* ABOUT */
+    .tag {
+      position: absolute;
+      top: -13px;
+      right: 20px;
+      background: #f5c542;
+      color: #080808;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5c542;
+      color: #080808;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .form-box {
+      max-width: 700px;
+      margin: auto;
+      background: #111;
+      padding: 30px;
+      border: 1px solid #292929;
+      border-radius: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: #080808;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 9px;
+      padding: 13px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #f5c542;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
     .about {
-      background: white;
+      background: #0e0e0e;
     }
 
     .about-box {
-      max-width: 900px;
+      max-width: 850px;
       margin: auto;
       text-align: center;
     }
 
     .about-box p {
-      color: #64748b;
-      font-size: 17px;
-      margin-top: 15px;
+      color: #aaa;
+      margin-bottom: 15px;
     }
 
-    /* BENEFITS */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .benefit {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
+    .cta {
       text-align: center;
-      border: 1px solid #e5e7eb;
+      background: linear-gradient(135deg, #171300, #0b0b0b);
+      border-top: 1px solid #292929;
+      border-bottom: 1px solid #292929;
     }
 
-    .benefit div {
-      font-size: 35px;
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      padding: 35px 20px;
+      background: #050505;
+      text-align: center;
+    }
+
+    footer .logo {
       margin-bottom: 10px;
     }
 
-    .benefit h3 {
-      margin-bottom: 8px;
+    footer p {
+      color: #777;
+      font-size: 13px;
     }
 
-    .benefit p {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-
-    .contact p {
-      color: #cbd5e1;
-      margin: 15px auto 25px;
-      max-width: 600px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #020617;
-      color: #94a3b8;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    /* WHATSAPP FLOAT */
     .whatsapp {
       position: fixed;
       right: 20px;
       bottom: 20px;
-      width: 60px;
-      height: 60px;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 29px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
       z-index: 999;
-      transition: 0.3s;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 27px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.4);
     }
 
     .whatsapp:hover {
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
 
-    /* MOBILE */
     @media (max-width: 800px) {
-
-      header {
-        padding: 16px 5%;
+      nav {
+        display: none;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 70px 5%;
-        min-height: 550px;
-      }
-
-      section {
-        padding: 60px 5%;
-      }
-
-      .products,
-      .benefits {
+      .cards {
         grid-template-columns: 1fr;
       }
 
-      .section-title h2 {
-        font-size: 30px;
+      .steps {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .hero h1 {
-        font-size: 45px;
+      .hero {
+        min-height: 80vh;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .steps {
+        grid-template-columns: 1fr;
       }
 
-      .hero p {
-        font-size: 16px;
+      section {
+        padding: 65px 15px;
+      }
+
+      .form-box {
+        padding: 20px;
       }
     }
   </style>
@@ -382,250 +448,428 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">Valdimiro<span>Digital</span></div>
+<header>
+  <div class="nav">
+    <a href="#inicio" class="logo">VALDIMIRO <span>MUSIC</span></a>
 
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#planos">Planos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#distribuir">Distribuir</a>
     </nav>
-  </header>
+  </div>
+</header>
 
+<main>
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
+<section class="hero" id="inicio">
+  <div class="hero-content">
 
-    <div class="hero-content">
+    <div class="badge">🎵 DISTRIBUIÇÃO MUSICAL DIGITAL</div>
 
-      <div class="badge">
-        🚀 SOLUÇÕES DIGITAIS
-      </div>
+    <h1>
+      A tua música.<br>
+      <span>O mundo a ouvir.</span>
+    </h1>
 
-      <h1>
-        Transforme suas ideias em
-        <span>resultados.</span>
-      </h1>
+    <p>
+      A Valdimiro Music ajuda artistas independentes a preparar
+      e distribuir os seus lançamentos para o mercado digital.
+    </p>
 
-      <p>
-        Bem-vindo à Valdimiro Digital.
-        Encontre produtos digitais, cursos e serviços
-        pensados para ajudar você a crescer no mundo digital.
-      </p>
+    <div class="buttons">
+      <a href="#distribuir" class="btn btn-primary">
+        🚀 Distribuir minha música
+      </a>
 
-      <div class="hero-buttons">
-        <a href="#produtos" class="btn btn-primary">
-          Ver produtos
-        </a>
-
-        <a href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital,%20quero%20saber%20mais%20sobre%20os%20produtos."
-           class="btn btn-secondary"
-           target="_blank">
-          Falar no WhatsApp
-        </a>
-      </div>
-
+      <a
+        href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20saber%20como%20distribuir%20a%20minha%20música."
+        class="btn btn-outline"
+        target="_blank">
+        💬 Falar no WhatsApp
+      </a>
     </div>
 
-  </section>
+  </div>
+</section>
 
 
-  <!-- PRODUTOS -->
-  <section id="produtos">
+<section id="servicos">
+  <div class="container">
 
     <div class="section-title">
-      <h2>Produtos & Serviços</h2>
-      <p>Escolha o que você precisa e fale diretamente connosco.</p>
+      <h2>Nossos Serviços</h2>
+      <p>Soluções para artistas que querem levar a música mais longe.</p>
     </div>
 
-    <div class="products">
+    <div class="cards">
 
-
-      <!-- PRODUTO 1 -->
       <div class="card">
-
-        <div class="card-icon">
-          🧠
-        </div>
-
-        <h3>Mente Bilionário</h3>
-
+        <div class="icon">🎵</div>
+        <h3>Distribuição Musical</h3>
         <p>
-          Conteúdo digital para desenvolver uma mentalidade
-          focada em crescimento, disciplina e resultados.
+          Preparação e encaminhamento do teu lançamento
+          para distribuição digital.
         </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Relatórios</h3>
+        <p>
+          Acompanhamento dos resultados dos teus lançamentos
+          e desempenho digital.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📣</div>
+        <h3>Promoção</h3>
+        <p>
+          Serviços de divulgação para aumentar a visibilidade
+          do teu projeto musical.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="planos">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Planos</h2>
+      <p>Escolhe o serviço ideal para o teu lançamento.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Single</h3>
 
         <div class="price">
-          5.000 Kz
+          3.000 Kz
         </div>
 
+        <ul class="features">
+          <li>1 música</li>
+          <li>Preparação do lançamento</li>
+          <li>Orientação do artista</li>
+        </ul>
+
         <a
-          class="buy"
-          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital!%20Quero%20comprar%20o%20Mente%20Bilionário%20por%205.000%20Kz."
+          class="btn btn-primary"
+          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20o%20plano%20Single%20de%203.000%20Kz."
           target="_blank">
-          🛒 Comprar
+          Escolher Single
+        </a>
+      </div>
+
+
+      <div class="card highlight">
+
+        <div class="tag">POPULAR</div>
+
+        <h3>EP</h3>
+
+        <div class="price">
+          7.000 Kz
+        </div>
+
+        <ul class="features">
+          <li>Até 5 músicas</li>
+          <li>Preparação do lançamento</li>
+          <li>Orientação do artista</li>
+          <li>Acompanhamento</li>
+        </ul>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20o%20plano%20EP%20de%207.000%20Kz."
+          target="_blank">
+          Escolher EP
         </a>
 
       </div>
 
 
-      <!-- PRODUTO 2 -->
       <div class="card">
-
-        <div class="card-icon">
-          🎓
-        </div>
-
-        <h3>Curso Digital</h3>
-
-        <p>
-          Curso digital para aprender novas habilidades
-          e melhorar sua presença e oportunidades no mundo online.
-        </p>
-
-        <div class="price">
-          1.000 Kz
-        </div>
-
-        <a
-          class="buy"
-          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital!%20Quero%20comprar%20o%20Curso%20Digital%20por%201.000%20Kz."
-          target="_blank">
-          🛒 Comprar
-        </a>
-
-      </div>
-
-
-      <!-- PRODUTO 3 -->
-      <div class="card">
-
-        <div class="card-icon">
-          💻
-        </div>
-
-        <h3>Serviço Digital</h3>
-
-        <p>
-          Serviço digital profissional para ajudar a transformar
-          sua ideia ou necessidade em uma solução online.
-        </p>
+        <h3>Álbum</h3>
 
         <div class="price">
           15.000 Kz
         </div>
 
+        <ul class="features">
+          <li>Até 12 músicas</li>
+          <li>Preparação do lançamento</li>
+          <li>Orientação do artista</li>
+          <li>Acompanhamento</li>
+        </ul>
+
         <a
-          class="buy"
-          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital!%20Tenho%20interesse%20no%20Serviço%20Digital%20de%2015.000%20Kz."
+          class="btn btn-primary"
+          href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20o%20plano%20Álbum%20de%2015.000%20Kz."
           target="_blank">
-          🛒 Comprar
+          Escolher Álbum
         </a>
 
       </div>
 
     </div>
+  </div>
+</section>
 
-  </section>
+
+<section id="como-funciona">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Como funciona?</h2>
+      <p>Um processo simples para começar o teu lançamento.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Envia</h3>
+        <p>Preenche o formulário com os dados da tua música.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Analisamos</h3>
+        <p>Verificamos as informações e orientamos o lançamento.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Preparação</h3>
+        <p>Organizamos os dados necessários para a distribuição.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>Lançamento</h3>
+        <p>O projeto segue para o processo de distribuição digital.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
-  <!-- SOBRE -->
-  <section class="about">
+<section id="distribuir">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Distribui a tua música</h2>
+      <p>
+        Preenche os dados abaixo. Ao clicar em enviar,
+        o pedido será preparado para enviar pelo WhatsApp.
+      </p>
+    </div>
+
+    <div class="form-box">
+
+      <form id="musicForm">
+
+        <div class="form-group">
+          <label for="artist">Nome artístico</label>
+          <input
+            type="text"
+            id="artist"
+            placeholder="Ex.: Johnstar"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="song">Nome da música</label>
+          <input
+            type="text"
+            id="song"
+            placeholder="Nome da música"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="teuemail@gmail.com"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="plan">Plano</label>
+
+          <select id="plan" required>
+            <option value="">Escolhe um plano</option>
+            <option value="Single - 3.000 Kz">Single - 3.000 Kz</option>
+            <option value="EP - 7.000 Kz">EP - 7.000 Kz</option>
+            <option value="Álbum - 15.000 Kz">Álbum - 15.000 Kz</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Informações adicionais</label>
+
+          <textarea
+            id="message"
+            placeholder="Conta-nos alguma informação sobre o lançamento..."></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="width:100%;">
+          🚀 Enviar pedido pelo WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="about" id="sobre">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Sobre a Valdimiro Music</h2>
+    </div>
 
     <div class="about-box">
 
-      <div class="section-title">
-        <h2>Sobre a Valdimiro Digital</h2>
-      </div>
+      <p>
+        A Valdimiro Music é uma iniciativa dedicada a artistas
+        independentes que querem profissionalizar os seus lançamentos
+        e alcançar o público digital.
+      </p>
 
       <p>
-        A Valdimiro Digital é uma plataforma criada para oferecer
-        produtos e serviços digitais de forma simples, rápida e acessível.
-        Nosso objetivo é ajudar pessoas e negócios a aproveitarem
-        as oportunidades do mundo digital.
+        O nosso objetivo é tornar o processo mais simples,
+        profissional e acessível para artistas em Angola e além.
+      </p>
+
+      <p>
+        Trabalhamos para construir uma plataforma cada vez mais
+        completa de distribuição e serviços musicais.
       </p>
 
     </div>
-
-  </section>
-
-
-  <!-- BENEFÍCIOS -->
-  <section>
-
-    <div class="section-title">
-      <h2>Por que escolher a Valdimiro Digital?</h2>
-    </div>
-
-    <div class="benefits">
-
-      <div class="benefit">
-        <div>⚡</div>
-        <h3>Rápido</h3>
-        <p>
-          Atendimento simples e direto pelo WhatsApp.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <div>💡</div>
-        <h3>Digital</h3>
-        <p>
-          Soluções pensadas para o mundo moderno.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <div>🤝</div>
-        <h3>Atendimento</h3>
-        <p>
-          Fale diretamente com a Valdimiro Digital.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
+  </div>
+</section>
 
 
-  <!-- CONTACTO -->
-  <section class="contact" id="contacto">
+<section class="cta">
+  <div class="container">
 
-    <div class="section-title">
-      <h2>Vamos trabalhar juntos?</h2>
-    </div>
+    <h2>Pronto para lançar?</h2>
 
     <p>
-      Escolha um produto ou serviço e entre em contacto
-      connosco pelo WhatsApp.
+      Dá o próximo passo com a Valdimiro Music.
     </p>
 
-    <a
-      href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital!%20Quero%20saber%20mais."
-      class="btn btn-primary"
-      target="_blank">
-      💬 Conversar no WhatsApp
-    </a>
+    <div class="buttons">
 
-  </section>
+      <a href="#distribuir" class="btn btn-primary">
+        🎤 Começar agora
+      </a>
+
+      <a
+        href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20começar%20a%20distribuir%20a%20minha%20música."
+        class="btn btn-outline"
+        target="_blank">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
 
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 <strong>Valdimiro Digital</strong>.
-    Todos os direitos reservados.
-  </footer>
+<footer>
+
+  <div class="logo">
+    VALDIMIRO <span>MUSIC</span>
+  </div>
+
+  <p>
+    © 2026 Valdimiro Music. Todos os direitos reservados.
+  </p>
+
+  <p>
+    Distribuição e serviços musicais para artistas independentes.
+  </p>
+
+</footer>
 
 
-  <!-- WHATSAPP FLUTUANTE -->
-  <a
-    class="whatsapp"
-    href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Digital!%20Vim%20pelo%20site."
-    target="_blank"
-    aria-label="WhatsApp">
-    ☎
-  </a>
+<a
+  class="whatsapp"
+  href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music!%20Quero%20informações%20sobre%20distribuição%20musical."
+  target="_blank"
+  aria-label="WhatsApp">
+  ☎
+</a>
+
+
+<script>
+
+  const form = document.getElementById("musicForm");
+
+  form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const artist =
+      document.getElementById("artist").value.trim();
+
+    const song =
+      document.getElementById("song").value.trim();
+
+    const email =
+      document.getElementById("email").value.trim();
+
+    const plan =
+      document.getElementById("plan").value;
+
+    const message =
+      document.getElementById("message").value.trim();
+
+    const whatsappNumber = "244944217517";
+
+    const text =
+      "🎵 NOVO PEDIDO — VALDIMIRO MUSIC\n\n" +
+      "👤 Nome artístico: " + artist + "\n" +
+      "🎶 Música: " + song + "\n" +
+      "📧 Email: " + email + "\n" +
+      "💰 Plano: " + plan + "\n" +
+      "📝 Informações: " + (message || "Nenhuma") +
+      "\n\n" +
+      "Quero iniciar o processo de distribuição.";
+
+    const url =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+  });
+
+</script>
 
 </body>
 </html>
