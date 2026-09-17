@@ -1,824 +1,752 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Valdimiro Music | Distribuição Musical</title>
+  <title>Valdimiro Music | Distribuição Musical</title>
 
-<meta name="description" content="Valdimiro Music — distribuição musical para artistas independentes. Envie a sua música e prepare o seu lançamento para plataformas digitais.">
-<meta name="keywords" content="Valdimiro Music, distribuição musical, música, artistas, Spotify, YouTube Music, Apple Music, Deezer">
-<meta name="author" content="Valdimiro Music">
+  <meta name="description" content="Valdimiro Music — distribuição musical para artistas independentes. Envie a sua música e prepare o seu lançamento para plataformas digitais.">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
-}
+  <meta name="keywords" content="Valdimiro Music, distribuição musical, música, artistas, Spotify, YouTube Music, Apple Music, Deezer">
 
-html{
-  scroll-behavior:smooth;
-}
+  <meta name="theme-color" content="#080808">
 
-body{
-  background:#070707;
-  color:#fff;
-  line-height:1.6;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(5,5,5,.96);
-  border-bottom:1px solid #222;
-  padding:15px 6%;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.6;
+    }
 
-.nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 1px solid #222;
+      backdrop-filter: blur(10px);
+    }
 
-.logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#f5c400;
-}
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:14px;
-}
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
 
-nav a:hover{
-  color:#f5c400;
-}
+    .logo span {
+      color: #00e5ff;
+    }
 
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 20px;
-  background:
-  radial-gradient(circle at top,#292000 0,#070707 45%);
-}
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-.hero-content{
-  max-width:850px;
-}
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-.badge{
-  display:inline-block;
-  border:1px solid #f5c400;
-  color:#f5c400;
-  padding:7px 15px;
-  border-radius:30px;
-  margin-bottom:20px;
-  font-size:13px;
-}
+    nav a:hover {
+      color: #00e5ff;
+    }
 
-h1{
-  font-size:clamp(42px,8vw,76px);
-  line-height:1.05;
-  margin-bottom:20px;
-}
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 6%;
+      background:
+        radial-gradient(circle at top, #12333a 0%, #080808 45%);
+    }
 
-.highlight{
-  color:#f5c400;
-}
+    .hero-content {
+      max-width: 850px;
+    }
 
-.hero p{
-  color:#bbb;
-  font-size:18px;
-  max-width:700px;
-  margin:0 auto 30px;
-}
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 78px);
+      margin-bottom: 20px;
+    }
 
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  margin:6px;
-  cursor:pointer;
-  border:none;
-}
+    .hero h1 span {
+      color: #00e5ff;
+    }
 
-.btn-primary{
-  background:#f5c400;
-  color:#000;
-}
+    .hero p {
+      color: #bbb;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
 
-.btn-primary:hover{
-  background:#ffd83d;
-}
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
 
-.btn-outline{
-  border:1px solid #f5c400;
-  color:#f5c400;
-  background:transparent;
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
 
-section{
-  padding:75px 6%;
-}
+    .btn-primary {
+      background: #00e5ff;
+      color: #000;
+    }
 
-.container{
-  max-width:1150px;
-  margin:auto;
-}
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
 
-.section-title{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:12px;
-}
+    .btn-secondary {
+      border: 1px solid #444;
+      color: #fff;
+      background: #111;
+    }
 
-.section-text{
-  text-align:center;
-  color:#aaa;
-  max-width:700px;
-  margin:0 auto 40px;
-}
+    .btn-secondary:hover {
+      border-color: #00e5ff;
+      color: #00e5ff;
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:20px;
-}
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 6%;
+    }
 
-.card{
-  background:#111;
-  border:1px solid #292929;
-  border-radius:15px;
-  padding:28px;
-  transition:.25s;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:#f5c400;
-}
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
 
-.icon{
-  font-size:35px;
-  margin-bottom:15px;
-}
+    .section-title p {
+      color: #999;
+    }
 
-.card h3{
-  margin-bottom:10px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
 
-.card p{
-  color:#aaa;
-  font-size:14px;
-}
+    .card {
+      background: #111;
+      border: 1px solid #252525;
+      border-radius: 16px;
+      padding: 28px;
+      transition: .2s;
+    }
 
-.platforms{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:30px;
-}
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #00e5ff;
+    }
 
-.platform{
-  background:#111;
-  border:1px solid #333;
-  padding:12px 18px;
-  border-radius:30px;
-  color:#ddd;
-}
+    .card h3 {
+      margin-bottom: 12px;
+      color: #fff;
+    }
 
-.pricing{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
-}
+    .card p {
+      color: #aaa;
+      font-size: 15px;
+    }
 
-.price-card{
-  background:#101010;
-  border:1px solid #333;
-  border-radius:16px;
-  padding:30px;
-  text-align:center;
-}
+    .platforms {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.price-card.featured{
-  border:2px solid #f5c400;
-}
+    .platform {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 14px 20px;
+      border-radius: 10px;
+      color: #ddd;
+    }
 
-.price{
-  font-size:34px;
-  font-weight:bold;
-  color:#f5c400;
-  margin:15px 0;
-}
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.price-card ul{
-  list-style:none;
-  color:#aaa;
-  text-align:left;
-  margin:20px 0;
-}
+    .price-card {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
 
-.price-card li{
-  margin:9px 0;
-}
+    .price-card.featured {
+      border: 2px solid #00e5ff;
+    }
 
-.price-card li::before{
-  content:"✓ ";
-  color:#f5c400;
-}
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 18px 0;
+      color: #00e5ff;
+    }
 
-.form-box{
-  max-width:800px;
-  margin:auto;
-  background:#101010;
-  border:1px solid #292929;
-  border-radius:16px;
-  padding:30px;
-}
+    .price-card ul {
+      list-style: none;
+      text-align: left;
+      margin: 20px 0;
+    }
 
-label{
-  display:block;
-  margin:15px 0 7px;
-  font-weight:bold;
-}
+    .price-card li {
+      margin: 10px 0;
+      color: #bbb;
+    }
 
-input,select,textarea{
-  width:100%;
-  padding:14px;
-  background:#080808;
-  border:1px solid #333;
-  border-radius:8px;
-  color:#fff;
-  outline:none;
-}
+    .price-card li::before {
+      content: "✓ ";
+      color: #00e5ff;
+    }
 
-input:focus,select:focus,textarea:focus{
-  border-color:#f5c400;
-}
+    .steps {
+      counter-reset: step;
+    }
 
-textarea{
-  min-height:120px;
-  resize:vertical;
-}
+    .step {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 15px;
+    }
 
-.notice{
-  background:#171400;
-  border:1px solid #6d5900;
-  color:#ddd;
-  padding:16px;
-  border-radius:10px;
-  margin:20px 0;
-  font-size:14px;
-}
+    .step h3 {
+      margin-bottom: 8px;
+    }
 
-.payment{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-}
+    .step p {
+      color: #aaa;
+    }
 
-.payment-box{
-  background:#101010;
-  border:1px solid #333;
-  border-radius:16px;
-  padding:35px;
-}
+    .blog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.payment-box h3{
-  color:#f5c400;
-  margin-bottom:10px;
-}
+    .blog-card {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 25px;
+      border-radius: 14px;
+    }
 
-.status{
-  margin-top:20px;
-  padding:15px;
-  border-radius:8px;
-  display:none;
-  background:#102010;
-  border:1px solid #365c36;
-  color:#c9ffc9;
-}
+    .blog-card h3 {
+      margin-bottom: 12px;
+    }
 
-footer{
-  background:#050505;
-  border-top:1px solid #222;
-  padding:40px 6%;
-  text-align:center;
-  color:#777;
-}
+    .blog-card p {
+      color: #999;
+      margin-bottom: 15px;
+    }
 
-footer strong{
-  color:#f5c400;
-}
+    .contact {
+      text-align: center;
+      background: #0d1719;
+      border-radius: 20px;
+      margin-bottom: 50px;
+    }
 
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25d366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:28px;
-  z-index:999;
-  box-shadow:0 5px 20px #000;
-}
+    .contact p {
+      color: #aaa;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
 
-@media(max-width:700px){
-  nav{
-    display:none;
-  }
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 35px 6%;
+      color: #777;
+      background: #050505;
+    }
 
-  header{
-    padding:14px 20px;
-  }
+    footer strong {
+      color: #fff;
+    }
 
-  .hero{
-    min-height:80vh;
-  }
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 20px rgba(0,0,0,.4);
+    }
 
-  section{
-    padding:55px 20px;
-  }
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
 
-  .section-title{
-    font-size:30px;
-  }
+      .hero {
+        min-height: 80vh;
+      }
 
-  .form-box,.payment-box{
-    padding:20px;
-  }
-}
-</style>
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="nav">
-    <div class="logo">VALDIMIRO MUSIC</div>
+
+    <div class="logo">
+      Valdimiro <span>Music</span>
+    </div>
 
     <nav>
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
+      <a href="#plataformas">Plataformas</a>
       <a href="#precos">Preços</a>
-      <a href="#enviar">Enviar Música</a>
+      <a href="#blog">Blog</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
 <section class="hero" id="inicio">
+
   <div class="hero-content">
 
-    <span class="badge">DISTRIBUIÇÃO MUSICAL DIGITAL</span>
-
     <h1>
-      A tua música merece<br>
-      <span class="highlight">ser ouvida.</span>
+      Leva a tua música<br>
+      <span>para o mundo.</span>
     </h1>
 
     <p>
-      A Valdimiro Music ajuda artistas independentes a preparar
-      e distribuir os seus lançamentos para plataformas digitais.
+      A Valdimiro Music ajuda artistas independentes
+      a preparar e distribuir os seus lançamentos
+      para plataformas digitais.
     </p>
 
-    <a href="#enviar" class="btn btn-primary">
-      ENVIAR MINHA MÚSICA
-    </a>
-
-    <a href="#precos" class="btn btn-outline">
-      VER PREÇOS
-    </a>
-
-  </div>
-</section>
-
-
-<section id="servicos">
-  <div class="container">
-
-    <h2 class="section-title">O que fazemos</h2>
-
-    <p class="section-text">
-      Uma estrutura criada para artistas que querem levar a sua música
-      para o mercado digital.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🎵</div>
-        <h3>Distribuição Digital</h3>
-        <p>
-          Preparação e distribuição dos lançamentos através
-          de parceiros e sistemas de distribuição compatíveis.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🎧</div>
-        <h3>Plataformas Digitais</h3>
-        <p>
-          Estrutura preparada para distribuição para serviços
-          como Spotify, Apple Music, YouTube Music e Deezer.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>Presença Digital</h3>
-        <p>
-          Organização dos dados do lançamento para facilitar
-          a descoberta da música na internet.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">💰</div>
-        <h3>Royalties</h3>
-        <p>
-          Estrutura preparada para acompanhar receitas provenientes
-          dos sistemas de distribuição quando disponíveis.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="platforms">
-      <span class="platform">Spotify</span>
-      <span class="platform">YouTube Music</span>
-      <span class="platform">Apple Music</span>
-      <span class="platform">Deezer</span>
-      <span class="platform">Amazon Music</span>
-      <span class="platform">TikTok</span>
-      <span class="platform">Instagram</span>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="precos">
-  <div class="container">
-
-    <h2 class="section-title">Planos</h2>
-
-    <p class="section-text">
-      Escolha o serviço adequado para o seu lançamento.
-    </p>
-
-    <div class="pricing">
-
-      <div class="price-card">
-        <h3>Lançamento Básico</h3>
-
-        <div class="price">5.000 Kz</div>
-
-        <ul>
-          <li>1 lançamento</li>
-          <li>Preparação dos dados</li>
-          <li>Preparação da capa</li>
-          <li>Suporte inicial</li>
-        </ul>
-
-        <a href="#enviar" class="btn btn-primary">
-          ESCOLHER
-        </a>
-      </div>
-
-
-      <div class="price-card featured">
-        <h3>Lançamento Pro</h3>
-
-        <div class="price">10.000 Kz</div>
-
-        <ul>
-          <li>1 lançamento</li>
-          <li>Preparação completa</li>
-          <li>Metadados</li>
-          <li>Suporte prioritário</li>
-          <li>Preparação para múltiplas plataformas</li>
-        </ul>
-
-        <a href="#enviar" class="btn btn-primary">
-          ESCOLHER
-        </a>
-      </div>
-
-
-      <div class="price-card">
-        <h3>Serviço Premium</h3>
-
-        <div class="price">15.000 Kz</div>
-
-        <ul>
-          <li>Atendimento personalizado</li>
-          <li>Preparação do lançamento</li>
-          <li>Suporte completo</li>
-          <li>Orientação de publicação</li>
-        </ul>
-
-        <a href="#enviar" class="btn btn-primary">
-          ESCOLHER
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section id="enviar">
-  <div class="container">
-
-    <h2 class="section-title">Enviar música</h2>
-
-    <p class="section-text">
-      Preencha os dados do seu lançamento. Depois entraremos em contacto
-      para receber os ficheiros e concluir o processo.
-    </p>
-
-    <div class="form-box">
-
-      <form id="musicForm">
-
-        <label for="artist">Nome artístico</label>
-        <input
-          id="artist"
-          name="artist"
-          type="text"
-          placeholder="Ex.: Johnstar"
-          required
-        >
-
-        <label for="song">Nome da música</label>
-        <input
-          id="song"
-          name="song"
-          type="text"
-          placeholder="Nome da música"
-          required
-        >
-
-        <label for="email">E-mail</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="seuemail@gmail.com"
-          required
-        >
-
-        <label for="genre">Género musical</label>
-        <select id="genre" name="genre" required>
-          <option value="">Escolha o género</option>
-          <option>Afrobeat</option>
-          <option>Zouk</option>
-          <option>Kizomba</option>
-          <option>Rap</option>
-          <option>Hip-Hop</option>
-          <option>R&B</option>
-          <option>Gospel</option>
-          <option>Pop</option>
-          <option>Outro</option>
-        </select>
-
-        <label for="release">Data desejada para lançamento</label>
-        <input
-          id="release"
-          name="release"
-          type="date"
-        >
-
-        <label for="platform">Plataformas pretendidas</label>
-        <select id="platform" name="platform">
-          <option>Todas as plataformas disponíveis</option>
-          <option>Spotify</option>
-          <option>YouTube Music</option>
-          <option>Apple Music</option>
-          <option>Deezer</option>
-          <option>Outras</option>
-        </select>
-
-        <label for="message">Informações adicionais</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Participações, compositores, observações..."
-        ></textarea>
-
-        <div class="notice">
-          ⚠️ O formulário recolhe os dados do lançamento.
-          O envio automático do áudio e a distribuição para plataformas
-          exigem uma infraestrutura/backend e uma integração real com
-          um serviço de distribuição.
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-          ENVIAR PEDIDO
-        </button>
-
-        <div id="formStatus" class="status"></div>
-
-      </form>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section id="pagamento">
-  <div class="container payment">
-
-    <h2 class="section-title">Pagamento</h2>
-
-    <p class="section-text">
-      A Valdimiro Music está preparada para receber uma integração
-      de pagamento online.
-    </p>
-
-    <div class="payment-box">
-
-      <h3>💳 BitPay</h3>
-
-      <p>
-        O checkout BitPay será conectado aqui depois da criação
-        e aprovação da conta de comerciante e da configuração
-        das credenciais/API.
-      </p>
-
-      <div class="notice">
-        🔐 Por segurança, nunca coloque a chave secreta/API da BitPay
-        diretamente neste arquivo HTML público.
-      </div>
-
-      <button
-        class="btn btn-primary"
-        onclick="startPayment()"
-      >
-        PAGAR ONLINE
-      </button>
-
-      <div id="paymentStatus" class="status"></div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section id="contacto">
-  <div class="container">
-
-    <h2 class="section-title">Fale connosco</h2>
-
-    <p class="section-text">
-      Tem uma música para lançar? Entre em contacto com a Valdimiro Music.
-    </p>
-
-    <div style="text-align:center">
+    <div class="buttons">
 
       <a
         class="btn btn-primary"
-        href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music,%20quero%20distribuir%20a%20minha%20música."
-        target="_blank"
-      >
-        💬 FALAR NO WHATSAPP
+        href="https://forms.gle/WC4vNdQkD7vwXiBb6"
+        target="_blank">
+        🎵 Enviar minha música
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="#servicos">
+        Conhecer serviços
       </a>
 
     </div>
 
   </div>
+
+</section>
+
+
+<section id="servicos">
+
+  <div class="section-title">
+
+    <h2>Nossos Serviços</h2>
+
+    <p>
+      Soluções para artistas que querem lançar a sua música.
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🎵 Distribuição Musical</h3>
+      <p>
+        Preparação e encaminhamento dos lançamentos
+        para plataformas digitais.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📀 Lançamento</h3>
+      <p>
+        Organização das informações do artista,
+        música, capa e dados do lançamento.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📈 Presença Digital</h3>
+      <p>
+        Ajuda para preparar o lançamento para
+        alcançar ouvintes através das plataformas digitais.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎤 Artistas Independentes</h3>
+      <p>
+        Serviço pensado para artistas que estão
+        a começar ou a desenvolver a sua carreira.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="plataformas">
+
+  <div class="section-title">
+
+    <h2>Plataformas Digitais</h2>
+
+    <p>
+      O objetivo é preparar os lançamentos para distribuição
+      através dos principais serviços digitais.
+    </p>
+
+  </div>
+
+  <div class="platforms">
+
+    <div class="platform">Spotify</div>
+    <div class="platform">YouTube Music</div>
+    <div class="platform">Apple Music</div>
+    <div class="platform">Deezer</div>
+    <div class="platform">Amazon Music</div>
+    <div class="platform">Tidal</div>
+    <div class="platform">TikTok</div>
+    <div class="platform">Instagram</div>
+
+  </div>
+
+</section>
+
+
+<section id="precos">
+
+  <div class="section-title">
+
+    <h2>Planos</h2>
+
+    <p>
+      Escolha o serviço adequado para o seu lançamento.
+    </p>
+
+  </div>
+
+  <div class="pricing">
+
+    <div class="price-card">
+
+      <h3>Lançamento Básico</h3>
+
+      <div class="price">
+        5.000 Kz
+      </div>
+
+      <ul>
+        <li>1 lançamento</li>
+        <li>Preparação dos dados</li>
+        <li>Orientação para o envio</li>
+      </ul>
+
+      <a
+        class="btn btn-primary"
+        href="https://forms.gle/WC4vNdQkD7vwXiBb6"
+        target="_blank">
+        Começar
+      </a>
+
+    </div>
+
+
+    <div class="price-card featured">
+
+      <h3>Distribuição</h3>
+
+      <div class="price">
+        10.000 Kz
+      </div>
+
+      <ul>
+        <li>Distribuição de lançamento</li>
+        <li>Preparação do projeto</li>
+        <li>Orientação</li>
+        <li>Acompanhamento</li>
+      </ul>
+
+      <a
+        class="btn btn-primary"
+        href="https://forms.gle/WC4vNdQkD7vwXiBb6"
+        target="_blank">
+        Enviar música
+      </a>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <h3>Serviço Premium</h3>
+
+      <div class="price">
+        15.000 Kz
+      </div>
+
+      <ul>
+        <li>Atendimento personalizado</li>
+        <li>Preparação completa</li>
+        <li>Orientação de lançamento</li>
+        <li>Acompanhamento</li>
+      </ul>
+
+      <a
+        class="btn btn-primary"
+        href="https://forms.gle/WC4vNdQkD7vwXiBb6"
+        target="_blank">
+        Solicitar
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="section-title">
+
+    <h2>Como Funciona?</h2>
+
+    <p>
+      O processo foi pensado para ser simples.
+    </p>
+
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <h3>1. Envia a tua música</h3>
+      <p>
+        Preenche o formulário com os dados do artista
+        e do lançamento.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>2. Enviamos para análise</h3>
+      <p>
+        Os dados e materiais enviados são analisados
+        antes do processo de distribuição.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>3. Preparação do lançamento</h3>
+      <p>
+        Organizamos as informações necessárias
+        para o lançamento.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>4. Distribuição</h3>
+      <p>
+        O lançamento é encaminhado para os serviços
+        digitais compatíveis com o processo utilizado.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>5. Acompanhamento</h3>
+      <p>
+        O artista recebe informações sobre o andamento
+        do lançamento.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="blog">
+
+  <div class="section-title">
+
+    <h2>Blog Valdimiro Music</h2>
+
+    <p>
+      Conteúdos para ajudar artistas independentes.
+    </p>
+
+  </div>
+
+  <div class="blog">
+
+    <div class="blog-card">
+      <h3>Como preparar uma música para lançamento?</h3>
+      <p>
+        Conheça os principais elementos necessários
+        antes de enviar uma música para distribuição.
+      </p>
+      <a class="btn btn-secondary" href="#contacto">
+        Saber mais
+      </a>
+    </div>
+
+    <div class="blog-card">
+      <h3>Como divulgar uma música?</h3>
+      <p>
+        Estratégias básicas para aumentar a presença
+        de um lançamento nas redes sociais.
+      </p>
+      <a class="btn btn-secondary" href="#contacto">
+        Saber mais
+      </a>
+    </div>
+
+    <div class="blog-card">
+      <h3>O que é distribuição musical?</h3>
+      <p>
+        Entenda como funciona o processo de colocar
+        músicas em serviços digitais.
+      </p>
+      <a class="btn btn-secondary" href="#contacto">
+        Saber mais
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contacto">
+
+  <div class="section-title">
+
+    <h2>Pronto para lançar?</h2>
+
+    <p>
+      Envie os dados do seu projeto através do nosso
+      formulário de distribuição.
+    </p>
+
+  </div>
+
+  <div class="buttons">
+
+    <a
+      class="btn btn-primary"
+      href="https://forms.gle/WC4vNdQkD7vwXiBb6"
+      target="_blank">
+      🚀 Abrir formulário
+    </a>
+
+    <a
+      class="btn btn-secondary"
+      href="mailto:valdimiro.music@gmail.com">
+      ✉️ Enviar e-mail
+    </a>
+
+  </div>
+
 </section>
 
 </main>
 
 
-<a
-  class="whatsapp"
-  href="https://wa.me/244944217517?text=Olá%20Valdimiro%20Music,%20quero%20informações%20sobre%20distribuição%20musical."
-  target="_blank"
-  aria-label="WhatsApp"
->
-  ☎
-</a>
-
-
 <footer>
+
   <p>
-    © <span id="year"></span>
-    <strong>Valdimiro Music</strong>.
+    © 2026 <strong>Valdimiro Music</strong>.
     Todos os direitos reservados.
   </p>
 
   <p>
     Distribuição musical para artistas independentes.
   </p>
+
 </footer>
 
 
-<script>
+<!--
+  BOTÃO WHATSAPP
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+  IMPORTANTE:
+  Substitua 244XXXXXXXXX pelo seu número de WhatsApp,
+  incluindo o código de Angola 244.
+-->
 
-
-document.getElementById("musicForm").addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-  const artist =
-    document.getElementById("artist").value.trim();
-
-  const song =
-    document.getElementById("song").value.trim();
-
-  const email =
-    document.getElementById("email").value.trim();
-
-  const genre =
-    document.getElementById("genre").value;
-
-  const release =
-    document.getElementById("release").value;
-
-  const platform =
-    document.getElementById("platform").value;
-
-  const message =
-    document.getElementById("message").value.trim();
-
-
-  const whatsappText =
-    "Olá Valdimiro Music! Quero distribuir uma música.%0A%0A" +
-    "Artista: " + encodeURIComponent(artist) + "%0A" +
-    "Música: " + encodeURIComponent(song) + "%0A" +
-    "E-mail: " + encodeURIComponent(email) + "%0A" +
-    "Género: " + encodeURIComponent(genre) + "%0A" +
-    "Data: " + encodeURIComponent(release || "Não definida") + "%0A" +
-    "Plataformas: " + encodeURIComponent(platform) + "%0A" +
-    "Informações: " + encodeURIComponent(message || "Nenhuma");
-
-
-  const status =
-    document.getElementById("formStatus");
-
-  status.style.display = "block";
-
-  status.innerHTML =
-    "Pedido preparado. A abrir o WhatsApp para concluir o envio...";
-
-
-  setTimeout(function(){
-
-    window.open(
-      "https://wa.me/244944217517?text=" + whatsappText,
-      "_blank"
-    );
-
-  },700);
-
-});
-
-
-function startPayment(){
-
-  const status =
-    document.getElementById("paymentStatus");
-
-  status.style.display = "block";
-
-  status.innerHTML =
-    "O pagamento BitPay ainda precisa de ser ligado à conta/API da Valdimiro Music. Não foi colocado um checkout falso.";
-
-}
-
-</script>
+<a
+  class="whatsapp"
+  href="https://wa.me/244XXXXXXXXX?text=Olá%20Valdimiro%20Music,%20quero%20distribuir%20a%20minha%20música."
+  target="_blank">
+  WhatsApp
+</a>
 
 </body>
-</html>
+  </html>
